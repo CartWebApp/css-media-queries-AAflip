@@ -63,13 +63,36 @@
 }
 
 /* Tablet Styles*/
+  /* could use print for printing things */
+@media screen and (max-width: 1024px){
+  /* use an @ like in @import */
+  .third, .quarter{
+    width: calc(97% / 2);
+  }
 
+  [class^="box"]:last-child{
+    /* width: 98%; */
+    flex-grow:1;
+    /* flex-grow works almost better than width, remember it */
 
+  }
+
+  .flex-container{
+    height: fit-content;
+  }
+}
 
 
 /* Mobile Styles*/
+@media screen and (max-width: 520px){
+  /* dont forget selectors */
+  [class^="box"]{
+    width: 97%;
+    height: 29vh;
+  }
+}
 
-
+/* works best with relative units */
 
 
 
